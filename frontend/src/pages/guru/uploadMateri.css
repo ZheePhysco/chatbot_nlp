@@ -1,0 +1,16 @@
+.upload-box {
+    border: 2px dashed #0d6efd;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    background: #f8fbff;
+    transition: .3s;
+}
+
+.upload-box:hover {
+    background: #eef5ff;
+}
+
+.upload-box input {
+    margin-top: 20px;
+}
