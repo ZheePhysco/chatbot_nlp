@@ -18,6 +18,14 @@ class User(db.Model):
         db.Enum("guru","siswa"),
         nullable=False
     )
+    foto = db.Column(
+        db.String(255),
+        nullable=True
+    )
+    bio = db.Column(
+        db.Text,
+        nullable=True
+    )
     created_at = db.Column(
         db.DateTime,
         server_default=db.func.now()

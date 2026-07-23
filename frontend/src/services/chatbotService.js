@@ -15,3 +15,14 @@ export const askChatbot = async (materiId, pertanyaan) => {
     );
     return response.data;
 };
+
+export const askGeminiSiswa = async (materiId, pertanyaan) => {
+    const response = await api.post(
+        "/chat/gemini",
+        {
+            materi_id: materiId,
+            pertanyaan: pertanyaan
+        }
+    );
+    return response.data;
+};

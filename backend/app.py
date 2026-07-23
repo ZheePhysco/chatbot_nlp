@@ -9,6 +9,8 @@ from routes.materi_routes import materi_bp
 from routes.chatbot_routes import chatbot_bp
 from routes.chatbot_gemini_routes import chatbot_gemini_bp
 from routes.dashboard_routes import dashboard_bp
+from routes.history_routes import history_bp
+from routes.profile_routes import profile_bp
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -45,6 +47,16 @@ app.register_blueprint(
     url_prefix="/api/chat"
 )
 
+app.register_blueprint(
+    history_bp,
+    url_prefix="/api/history"
+)
+
+app.register_blueprint(
+    profile_bp,
+    url_prefix="/api/profile"
+)
+
 # HOME
 @app.route("/")
 def home():
@@ -65,6 +77,4 @@ if __name__ == "__main__":
     with app.app_context():
         db.create_all()
 
-    app.run(
-        debug=True
-    )
+    app.run(debug=True)

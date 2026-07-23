@@ -15,7 +15,7 @@ import SiswaLayout from "./layouts/SiswaLayout";
 // GURU
 import DashboardGuru from "./pages/guru/Dashboard";
 import MateriGuru from "./pages/guru/Materi";
-import DetailMateri from "./pages/guru/DetailMateri";
+import DetailMateriGuru from "./pages/guru/DetailMateri";
 import UploadMateri from "./pages/guru/UploadMateri";
 import ChatbotGuru from "./pages/guru/Chatbot";
 import ChatbotGemini from "./pages/guru/ChatbotGemini";
@@ -25,6 +25,7 @@ import ProfileGuru from "./pages/guru/Profile";
 // SISWA
 import DashboardSiswa from "./pages/siswa/Dashboard";
 import MateriSiswa from "./pages/siswa/Materi";
+import DetailMateriSiswa from "./pages/siswa/DetailMateri";
 import ChatbotSiswa from "./pages/siswa/Chatbot";
 import HistorySiswa from "./pages/siswa/History";
 import ProfileSiswa from "./pages/siswa/Profile";
@@ -66,7 +67,7 @@ function App() {
                     />
                     <Route
                         path="materi/:id"
-                        element={<DetailMateri />}
+                        element={<DetailMateriGuru />}
                     />
                     <Route
                         path="upload"
@@ -111,6 +112,10 @@ function App() {
                     <Route
                         path="materi"
                         element={<MateriSiswa />}
+                    />
+                    <Route
+                        path="materi/:id"
+                        element={<DetailMateriSiswa />}
                     />
                     <Route
                         path="chatbot"
